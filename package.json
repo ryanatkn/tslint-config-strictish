@@ -1,0 +1,21 @@
+{
+  "name": "tslint-config-strictish",
+  "version": "3.8.0",
+  "description": "an opinionated base config for tslint",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanatkn/tslint-config-strictish.git"
+  },
+  "keywords": [
+    "tslint"
+  ],
+  "author": "Ryan Atkinson <ryanatkn@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryanatkn/tslint-config-strictish/issues"
+  },
+  "homepage": "https://github.com/ryanatkn/tslint-config-strictish#readme"
+}
