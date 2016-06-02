@@ -6,7 +6,7 @@ module.exports = {
       "arguments",
       "statements",
     ],
-    "ban": false,
+    "ban": false, // too strict
     "class-name": true,
     "comment-format": [
       true,
@@ -16,7 +16,7 @@ module.exports = {
     ],
     "curly": true,
     "eofline": true, // may be annoying depending on text editor, but see rationale here: http://stackoverflow.com/questions/4700312/empty-new-line-at-the-end-of-the-java-source-files
-    "forin": false,
+    "forin": false, // too strict
     "indent": [ // "one is right and the other is wrong" -Richard Hendricks
       true,
       "spaces",
@@ -68,11 +68,11 @@ module.exports = {
     ],
     "new-parens": true,
     "no-angle-bracket-type-assertion": true,
-    "no-any": false,
+    "no-any": false, // too strict
     "no-arg": true,
     "no-bitwise": true, // favor explicit type conversions
     "no-conditional-assignment": true,
-    "no-consecutive-blank-lines": false,
+    "no-consecutive-blank-lines": false, // too strict
     "no-console": [ // explicitly opt-in to commit console statements
       true,
       // doesn't seem to support a regexp or catch-all here, pulled from Chrome/FF
@@ -84,7 +84,7 @@ module.exports = {
     "no-construct": true,
     "no-constructor-vars": true,
     "no-debugger": true,
-    "no-default-export": false,
+    "no-default-export": false, // too strict
     "no-duplicate-key": true,
     "no-duplicate-variable": true,
     "no-empty": true,
@@ -102,7 +102,7 @@ module.exports = {
       true,
       // "allow-declarations",
     ],
-    "no-null-keyword": false, // goes against TypeScript coding guidelines but eh
+    "no-null-keyword": false, // too strict
     "no-reference": true,
     "no-require-imports": true,
     "no-shadowed-variable": true,
@@ -120,7 +120,7 @@ module.exports = {
     "no-use-before-declare": true,
     "no-var-keyword": true,
     "no-var-requires": true,
-    "object-literal-sort-keys": false,
+    "object-literal-sort-keys": false, // too strict
     "one-line": [
       true,
       "check-catch",
@@ -180,7 +180,9 @@ module.exports = {
       },
     ],
     "use-isnan": true,
-    "use-strict": [ // is now emitted by TypeScript compiler, see https://github.com/Microsoft/TypeScript/wiki/What's-new-in-TypeScript#modules-are-now-emitted-with-a-use-strict-prologue
+    // disabled because it's now emitted by TypeScript compiler
+    // see https://github.com/Microsoft/TypeScript/wiki/What's-new-in-TypeScript#modules-are-now-emitted-with-a-use-strict-prologue
+    "use-strict": [
       false,
       "check-module",
       // "check-function",
