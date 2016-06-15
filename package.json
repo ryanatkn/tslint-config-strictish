@@ -1,6 +1,6 @@
 {
   "name": "tslint-config-strictish",
-  "version": "3.10.2",
+  "version": "3.11.0",
   "description": "an opinionated base config for tslint",
   "main": "index.js",
   "scripts": {

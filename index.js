@@ -32,6 +32,12 @@ module.exports = {
     "jsdoc-format": true,
     "label-position": true,
     "label-undefined": true,
+    "linebreak-style": [
+      true,
+      "LF",
+      // "CRLF",
+      // "CR",
+    ],
     "max-line-length": [
       true,
       100,
@@ -98,6 +104,7 @@ module.exports = {
       true,
       "check-function-in-method",
     ],
+    "no-mergeable-namespace": true,
     "no-namespace": [
       true,
       // "allow-declarations",
@@ -146,6 +153,7 @@ module.exports = {
       true,
       "always",
       // "never",
+      // "ignore-interfaces",
     ],
     "switch-default": true,
     "trailing-comma": [
