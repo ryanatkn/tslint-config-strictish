@@ -118,6 +118,7 @@ module.exports = {
     "no-trailing-whitespace": true,
     "no-unreachable": true,
     "no-unused-expression": true,
+    "no-unused-new": true,
     "no-unused-variable": [
       true,
       "check-parameters",
@@ -140,6 +141,10 @@ module.exports = {
       true,
       "ignore-for-loop",
     ],
+    // I usually prefer function declarations at the top level of a module
+    // and take advantage of hoisting to get the desired order,
+    // which usually places private helper functions after the main exported functions.
+    "only-arrow-functions": false,
     "quotemark": [
       true,
       "single",
@@ -168,14 +173,19 @@ module.exports = {
       "allow-null-check",
       // "allow-undefined-check",
     ],
+    // These typedef rules enforce the same
+    // type inference "sweet spot" that the Rust language uses,
+    // where function arguments and return values are explicitly typed,
+    // and inference is used as much as possible in function bodies.
     "typedef": [
       true,
       "call-signature",
+      "arrow-call-signature",
       "parameter",
       "arrow-parameter",
       "property-declaration",
       // "variable-declaration",
-      // "member-variable-declaration", // TODO doesn't work with arrow functions, ideally turned on
+      "member-variable-declaration",
     ],
     "typedef-whitespace": [
       true,
