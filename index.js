@@ -185,7 +185,7 @@ module.exports = {
       "arrow-parameter",
       "property-declaration",
       // "variable-declaration",
-      "member-variable-declaration",
+      // "member-variable-declaration",
     ],
     "typedef-whitespace": [
       true,
