@@ -15,7 +15,7 @@ module.exports = {
       // "check-uppercase",
     ],
     "curly": true,
-    "eofline": true, // may be annoying depending on text editor, but see rationale here: http://stackoverflow.com/questions/4700312/empty-new-line-at-the-end-of-the-java-source-files
+    "eofline": false, // annoying, so turned off despite this: http://stackoverflow.com/questions/4700312/empty-new-line-at-the-end-of-the-java-source-files
     "forin": false, // too strict
     "indent": [ // "one is right and the other is wrong" -Richard Hendricks
       true,
@@ -48,7 +48,7 @@ module.exports = {
       "check-constructor",
     ],
     // TODO not happy with arrow functions being treated as instance fields instead of methods
-    // could instead a bind decorator instead of `aBoundMethod = () => ...`
+    // could instead use a bind decorator instead of `aBoundMethod = () => ...`
     "member-ordering": [
       false,
       {
