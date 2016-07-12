@@ -180,9 +180,9 @@ module.exports = {
     "typedef": [
       true,
       "call-signature",
-      "arrow-call-signature",
+      // "arrow-call-signature",
       "parameter",
-      "arrow-parameter",
+      // "arrow-parameter",
       "property-declaration",
       // "variable-declaration",
       // "member-variable-declaration",
