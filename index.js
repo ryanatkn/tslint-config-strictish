@@ -115,7 +115,7 @@ module.exports = {
     "no-shadowed-variable": true,
     "no-string-literal": true,
     "no-switch-case-fall-through": true,
-    "no-trailing-whitespace": true,
+    "no-trailing-whitespace": false, // uglified when it matters
     "no-unreachable": true,
     "no-unused-expression": true,
     "no-unused-new": true,
