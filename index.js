@@ -43,7 +43,7 @@ module.exports = {
       100,
     ],
     "member-access": [
-      true,
+      false,
       "check-accessor",
       "check-constructor",
     ],
