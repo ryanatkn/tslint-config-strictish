@@ -4,6 +4,8 @@
   "description": "an opinionated base config for tslint",
   "main": "index.js",
   "scripts": {
+    "version": "git add -a",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",

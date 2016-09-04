@@ -1,11 +1,13 @@
 module.exports = {
   "rules": {
+    "adjacent-overload-signatures": true,
     "align": [
       true,
       "parameters",
       "arguments",
       "statements",
     ],
+    "arrow-parens": true, // is currently my preference for consistency, `(x) => x * 2` instead of `x => x * 2`
     "ban": false, // too strict
     "class-name": true,
     "comment-format": [
@@ -16,6 +18,7 @@ module.exports = {
     ],
     "curly": true,
     "eofline": false, // annoying, so turned off despite this: http://stackoverflow.com/questions/4700312/empty-new-line-at-the-end-of-the-java-source-files
+    "file-header": false, // no need
     "forin": false, // too strict
     "indent": [ // "one is right and the other is wrong" -Richard Hendricks
       true,
@@ -38,12 +41,13 @@ module.exports = {
       // "CRLF",
       // "CR",
     ],
+    "max-file-line-count": [false, 300], // too strict
     "max-line-length": [
       true,
       100,
     ],
     "member-access": [
-      false,
+      false, // too strict
       "check-accessor",
       "check-constructor",
     ],
@@ -95,6 +99,7 @@ module.exports = {
     "no-duplicate-variable": true,
     "no-empty": true,
     "no-eval": true,
+    "no-for-in-array": true,
     "no-inferrable-types": [
       true,
       "ignore-params",
@@ -117,6 +122,7 @@ module.exports = {
     "no-switch-case-fall-through": true,
     "no-trailing-whitespace": false, // uglified when it matters
     "no-unreachable": true,
+    "no-unsafe-finally": true,
     "no-unused-expression": true,
     "no-unused-new": true,
     "no-unused-variable": [
@@ -128,6 +134,8 @@ module.exports = {
     "no-use-before-declare": true,
     "no-var-keyword": true,
     "no-var-requires": true,
+    "object-literal-key-quotes": [true, "as-needed"],
+    "object-literal-shorthand": true,
     "object-literal-sort-keys": false, // too strict
     "one-line": [
       true,
@@ -141,10 +149,14 @@ module.exports = {
       true,
       "ignore-for-loop",
     ],
-    // I usually prefer function declarations at the top level of a module
-    // and take advantage of hoisting to get the desired order,
-    // which usually places private helper functions after the main exported functions.
-    "only-arrow-functions": false,
+    "only-arrow-functions": [true, "allow-declarations"],
+    "ordered-imports": [
+      false, // too strict
+      {
+        "import-sources-order": "lowercase-last",
+        "named-imports-order": "lowercase-first"
+      }
+    ],
     "quotemark": [
       true,
       "single",
@@ -154,6 +166,7 @@ module.exports = {
       // "avoid-escape",
     ],
     "radix": true,
+    "restrict-plus-operands": false, // too strict
     "semicolon": [
       true,
       "always",
