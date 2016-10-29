@@ -92,7 +92,7 @@ module.exports = {
       "trace", "warn",
     ],
     "no-construct": true,
-    "no-constructor-vars": true,
+    "no-constructor-vars": false, // these are super useful because they get initialized before the constructor body, unlike initialized member vars
     "no-debugger": true,
     "no-default-export": false, // too strict
     "no-duplicate-key": true,
