@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/ryanatkn/tslint-config-strictish/issues"
   },
-  "homepage": "https://github.com/ryanatkn/tslint-config-strictish#readme"
+  "homepage": "https://github.com/ryanatkn/tslint-config-strictish#readme",
+  "peerDependencies": {
+    "tslint": "^4.4.2"
+  }
 }

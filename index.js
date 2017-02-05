@@ -7,8 +7,12 @@ module.exports = {
       "arguments",
       "statements",
     ],
-    "arrow-parens": true, // is currently my preference for consistency, `(x) => x * 2` instead of `x => x * 2`
-    "ban": false, // too strict
+    "array-type": false, // "array" "array-simple" "generic"
+    "arrow-parens": [true, "ban-single-arg-parens"],
+    "arrow-return-shorthand": [true], // "multiline"
+    "await-promise": true,
+    "ban": false, // [true, ["someGlobalMethod"], ["someObject", "someFunction"], ["someObject", "otherFunction", "Optional explanation"]]
+    "callable-types": true,
     "class-name": true,
     "comment-format": [
       true,
@@ -16,15 +20,20 @@ module.exports = {
       // "check-lowercase",
       // "check-uppercase",
     ],
-    "curly": true,
+    "completed-docs": false,
+    "curly": false,
+    "cyclomatic-complexity": false,
     "eofline": false, // annoying, so turned off despite this: http://stackoverflow.com/questions/4700312/empty-new-line-at-the-end-of-the-java-source-files
     "file-header": false, // no need
     "forin": false, // too strict
+    "import-blacklist": false, // [true, "rxjs", "lodash"],
+    "import-spacing": true,
     "indent": [ // "one is right and the other is wrong" -Richard Hendricks
       true,
       "spaces",
       // "tabs",
     ],
+    "interface-over-type-literal": false,
     // TODO some patterns make the IPrefix useful and consistency may be the best option,
     // despite the TypeScript coding guidelines recommending against this
     "interface-name": [
@@ -34,7 +43,6 @@ module.exports = {
     ],
     "jsdoc-format": true,
     "label-position": true,
-    "label-undefined": true,
     "linebreak-style": [
       true,
       "LF",
@@ -59,7 +67,7 @@ module.exports = {
         // "order": "fields-first",
         // "order": "statics-first",
         // "order": "instance-sandwich",
-        "order": [      
+        "order": [
           "public-static-field",
           "protected-static-field",
           "private-static-field",
@@ -81,8 +89,9 @@ module.exports = {
     "no-any": false, // too strict
     "no-arg": true,
     "no-bitwise": true, // favor explicit type conversions
+    "no-boolean-literal-compare": false, // seem to need this for type narrowing sometimes, might be fixed in typescript tho?
     "no-conditional-assignment": true,
-    "no-consecutive-blank-lines": false, // too strict
+    "no-consecutive-blank-lines": [true, 2],
     "no-console": [ // explicitly opt-in to commit console statements
       true,
       // doesn't seem to support a regexp or catch-all here, pulled from Chrome/FF
@@ -92,49 +101,52 @@ module.exports = {
       "trace", "warn",
     ],
     "no-construct": true,
-    "no-constructor-vars": false, // these are super useful because they get initialized before the constructor body, unlike initialized member vars
     "no-debugger": true,
     "no-default-export": false, // too strict
-    "no-duplicate-key": true,
     "no-duplicate-variable": true,
     "no-empty": true,
+    "no-empty-interface": false,
     "no-eval": true,
+    "no-floating-promises": true, // TODO hmmm
     "no-for-in-array": true,
     "no-inferrable-types": [
       true,
       "ignore-params",
     ],
+    "no-inferred-empty-object-type": true,
     "no-internal-module": true,
     "no-invalid-this": [
       true,
       "check-function-in-method",
     ],
+    "no-magic-numbers": false, // [true, -1, 0, 1, 2, 3]
     "no-mergeable-namespace": true,
+    "no-misused-new": true,
     "no-namespace": [
       true,
       // "allow-declarations",
     ],
     "no-null-keyword": false, // too strict
+    "no-parameter-properties": false, // these are super useful because they get initialized before the constructor body, unlike initialized member vars
     "no-reference": true,
     "no-require-imports": true,
     "no-shadowed-variable": true,
     "no-string-literal": true,
+    "no-string-throw": true,
     "no-switch-case-fall-through": true,
     "no-trailing-whitespace": false, // uglified when it matters
-    "no-unreachable": true,
+    "no-unbound-method": false, // TODO huh?
+    "no-unnecessary-initializer": true,
+    "no-unnecessary-qualifier": false, // TODO revisit
+    "no-unsafe-any": false, // TODO what?
     "no-unsafe-finally": true,
-    "no-unused-expression": true,
+    "no-unused-expression": false, // "allow-fast-null-checks"
     "no-unused-new": true,
-    "no-unused-variable": [
-      true,
-      "check-parameters",
-      "react",
-      {"ignore-pattern": "^_"}, // prefix params with an underscore to mark them as ignored
-    ],
     "no-use-before-declare": true,
     "no-var-keyword": true,
     "no-var-requires": true,
-    "object-literal-key-quotes": [true, "as-needed"],
+    "no-void-expression": true,
+    "object-literal-key-quotes": [true, "consistent-as-needed"],
     "object-literal-shorthand": true,
     "object-literal-sort-keys": false, // too strict
     "one-line": [
@@ -149,7 +161,7 @@ module.exports = {
       true,
       "ignore-for-loop",
     ],
-    "only-arrow-functions": [true, "allow-declarations"],
+    "only-arrow-functions": [true, "allow-declarations", "allow-named-functions"],
     "ordered-imports": [
       false, // too strict
       {
@@ -157,6 +169,15 @@ module.exports = {
         "named-imports-order": "lowercase-first"
       }
     ],
+    "prefer-const": true,
+    "prefer-for-of": true,
+    "prefer-function-over-method": [
+      true,
+      "allow-public", // TODO revisit
+      "allow-protected" // TODO revisit
+    ],
+    "prefer-method-signature": true,
+    "promise-function-async": true,
     "quotemark": [
       true,
       "single",
@@ -172,11 +193,22 @@ module.exports = {
       "always",
       // "never",
       // "ignore-interfaces",
+      "ignore-bound-class-methods"
     ],
+    "space-before-function-paren": [
+      true,
+      {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
+    "strict-boolean-expressions": false, // TODO [true, "allow-null-union", "allow-undefined-union", "allow-string", "allow-number"]
+    "strict-type-predicates": true,
     "switch-default": true,
     "trailing-comma": [
       true,
-      { // "always" || "never"
+      { // "always" | "never"
         "multiline": "always",
         "singleline": "never",
       },
@@ -210,18 +242,13 @@ module.exports = {
         "variable-declaration": "nospace",
       },
     ],
+    "typeof-compare": true,
+    "unified-signatures": true,
     "use-isnan": true,
-    // disabled because it's now emitted by TypeScript compiler
-    // see https://github.com/Microsoft/TypeScript/wiki/What's-new-in-TypeScript#modules-are-now-emitted-with-a-use-strict-prologue
-    "use-strict": [
-      false,
-      "check-module",
-      // "check-function",
-    ],
     "variable-name": [
       true,
       "check-format",
-      "allow-leading-underscore", // TODO ideally this is turned off, but _ prefix is used to mark ignored function params for rule "no-unused-variable"
+      "allow-leading-underscore",
       // "allow-trailing-underscore",
       "allow-pascal-case", // TODO if the variable is a class, not an instance, prefer PascalCase
       "ban-keywords",
@@ -230,8 +257,9 @@ module.exports = {
       true,
       "check-branch",
       "check-decl",
-      "check-operator",
       "check-module",
+      "check-operator",
+      "check-preblock",
       "check-separator",
       "check-type",
       "check-typecast",

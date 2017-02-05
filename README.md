@@ -19,6 +19,7 @@ Most options are enabled, and the disabled ones have a comment explaining why.
   "extends": ["tslint-config-strictish"],
   "rules": {
     // overrides
+    "curly": true
   }
 }
 ```
