@@ -1,6 +1,6 @@
 {
   "name": "tslint-config-strictish",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "an opinionated base config for tslint",
   "main": "index.js",
   "scripts": {
