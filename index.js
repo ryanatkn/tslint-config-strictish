@@ -96,7 +96,7 @@ module.exports = {
       },
     ],
     "new-parens": true,
-    "newline-before-return": true,
+    "newline-before-return": false,
     "no-angle-bracket-type-assertion": true,
     "no-any": false, // too strict
     "no-arg": true,
