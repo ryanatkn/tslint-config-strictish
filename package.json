@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/ryanatkn/tslint-config-strictish#readme",
   "peerDependencies": {
-    "tslint": "^4.4.2"
+    "tslint": "5.1.0"
   }
 }

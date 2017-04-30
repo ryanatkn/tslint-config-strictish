@@ -12,6 +12,11 @@ module.exports = {
     "arrow-return-shorthand": [true], // "multiline"
     "await-promise": true,
     "ban": false, // [true, ["someGlobalMethod"], ["someObject", "someFunction"], ["someObject", "otherFunction", "Optional explanation"]]
+    "ban-types": [
+      true,
+      ["Object", "Use {} instead."],
+      ["String"]
+    ],
     "callable-types": true,
     "class-name": true,
     "comment-format": [
@@ -21,7 +26,10 @@ module.exports = {
       // "check-uppercase",
     ],
     "completed-docs": false,
-    "curly": false,
+    "curly": [
+      true,
+      "ignore-same-line"
+    ],
     "cyclomatic-complexity": false,
     "eofline": false, // annoying, so turned off despite this: http://stackoverflow.com/questions/4700312/empty-new-line-at-the-end-of-the-java-source-files
     "file-header": false, // no need
@@ -38,7 +46,7 @@ module.exports = {
     // despite the TypeScript coding guidelines recommending against this
     "interface-name": [
       false,
-      "always-prefix",
+      // "always-prefix",
       // "never-prefix",
     ],
     "jsdoc-format": true,
@@ -49,6 +57,7 @@ module.exports = {
       // "CRLF",
       // "CR",
     ],
+    "match-default-export-name": true,
     "max-file-line-count": [false, 300], // too strict
     "max-line-length": [
       true,
@@ -56,8 +65,9 @@ module.exports = {
     ],
     "member-access": [
       false, // too strict
-      "check-accessor",
-      "check-constructor",
+      // "check-accessor",
+      // "check-constructor",
+      // "no-public",
     ],
     // TODO not happy with arrow functions being treated as instance fields instead of methods
     // could instead use a bind decorator instead of `aBoundMethod = () => ...`
@@ -67,6 +77,7 @@ module.exports = {
         // "order": "fields-first",
         // "order": "statics-first",
         // "order": "instance-sandwich",
+        // alphabetize - docs are broken on this
         "order": [
           "public-static-field",
           "protected-static-field",
@@ -85,6 +96,7 @@ module.exports = {
       },
     ],
     "new-parens": true,
+    "newline-before-return": true,
     "no-angle-bracket-type-assertion": true,
     "no-any": false, // too strict
     "no-arg": true,
@@ -103,18 +115,25 @@ module.exports = {
     "no-construct": true,
     "no-debugger": true,
     "no-default-export": false, // too strict
+    "no-duplicate-super": true,
     "no-duplicate-variable": true,
     "no-empty": true,
     "no-empty-interface": false,
     "no-eval": true,
     "no-floating-promises": true, // TODO hmmm
     "no-for-in-array": true,
+    "no-import-side-effect": [
+      true,
+      { "ignore-module": "(\.html|\.css)$" }
+    ],
     "no-inferrable-types": [
       true,
       "ignore-params",
+      // ignore-properties
     ],
     "no-inferred-empty-object-type": true,
     "no-internal-module": true,
+    "no-invalid-template-strings": false, // nah, should be obvious enough
     "no-invalid-this": [
       true,
       "check-function-in-method",
@@ -126,26 +145,42 @@ module.exports = {
       true,
       // "allow-declarations",
     ],
+    "no-non-null-assertion": true,
     "no-null-keyword": false, // too strict
     "no-parameter-properties": false, // these are super useful because they get initialized before the constructor body, unlike initialized member vars
     "no-reference": true,
+    // "no-reference-import": true, // broken docs
     "no-require-imports": true,
     "no-shadowed-variable": true,
+    "no-sparse-arrays": true,
     "no-string-literal": true,
     "no-string-throw": true,
     "no-switch-case-fall-through": true,
-    "no-trailing-whitespace": false, // uglified when it matters
+    "no-trailing-whitespace": [
+      true,
+      "ignore-comments"
+      // "ignore-jsdoc"
+      // "ignore-template-strings"
+    ],
     "no-unbound-method": false, // TODO huh?
+    "no-unnecessary-callback-wrapper": true,
     "no-unnecessary-initializer": true,
     "no-unnecessary-qualifier": false, // TODO revisit
     "no-unsafe-any": false, // TODO what?
     "no-unsafe-finally": true,
-    "no-unused-expression": false, // "allow-fast-null-checks"
-    "no-unused-new": true,
+    "no-unused-expression": [
+      true,
+      // "allow-fast-null-checks",
+      // "allow-new",
+      "allow-tagged-template",
+    ],
     "no-use-before-declare": true,
     "no-var-keyword": true,
     "no-var-requires": true,
-    "no-void-expression": true,
+    "no-void-expression": [
+      true,
+      "ignore-arrow-function-shorthand"
+    ],
     "object-literal-key-quotes": [true, "consistent-as-needed"],
     "object-literal-shorthand": true,
     "object-literal-sort-keys": false, // too strict
@@ -169,7 +204,10 @@ module.exports = {
         "named-imports-order": "lowercase-first"
       }
     ],
-    "prefer-const": true,
+    "prefer-const": [
+      true,
+      { destructuring: "all" }
+    ],
     "prefer-for-of": true,
     "prefer-function-over-method": [
       true,
@@ -177,6 +215,7 @@ module.exports = {
       "allow-protected" // TODO revisit
     ],
     "prefer-method-signature": true,
+    "prefer-template": true,
     "promise-function-async": true,
     "quotemark": [
       true,
@@ -188,6 +227,7 @@ module.exports = {
     ],
     "radix": true,
     "restrict-plus-operands": false, // too strict
+    "return-undefined": true, // nah
     "semicolon": [
       true,
       "always",
@@ -231,6 +271,8 @@ module.exports = {
       "property-declaration",
       // "variable-declaration",
       // "member-variable-declaration",
+      // "object-destructuring",
+      // "array-destructuring",
     ],
     "typedef-whitespace": [
       true,
