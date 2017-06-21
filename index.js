@@ -1,5 +1,4 @@
 module.exports = {
-  defaultSeverity: 'warning',
   rules: {
     'adjacent-overload-signatures': true,
     align: false, // prettier
