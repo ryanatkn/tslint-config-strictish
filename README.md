@@ -1,14 +1,9 @@
 # tslint-config-strictish
 
 An opinionated [tslint](https://github.com/palantir/tslint)
-config with strict (but not too strict!) conventions that are
-mostly compatible with
-the [TypeScript coding guidelines](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines),
-[Airbnb's style guide](https://github.com/airbnb/javascript),
-and [JavaScript Standard Style](https://github.com/feross/standard).
+config with strict (but not too strict!) conventions.
 
-All available options are included in the config file so it's easy to make adjustments.
-Most options are enabled, and the disabled ones have a comment explaining why.
+Disables all formatting options that overlap with [prettier](https://github.com/prettier/prettier).
 
 ## Usage
     npm install --save-dev https://github.com/ryanatkn/tslint-config-strictish
