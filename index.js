@@ -228,7 +228,7 @@ module.exports = {
     ],
     "radix": true,
     "restrict-plus-operands": false, // too strict
-    "return-undefined": true, // nah
+    "return-undefined": false, // nah
     "semicolon": [
       true,
       "always",
