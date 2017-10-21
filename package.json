@@ -11,9 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/ryanatkn/tslint-config-strictish.git"
   },
-  "keywords": [
-    "tslint"
-  ],
+  "keywords": ["tslint"],
   "author": "Ryan Atkinson <ryanatkn@gmail.com>",
   "license": "MIT",
   "bugs": {
@@ -21,6 +19,6 @@
   },
   "homepage": "https://github.com/ryanatkn/tslint-config-strictish#readme",
   "peerDependencies": {
-    "tslint": "5.1.0"
+    "tslint": "5.8.0"
   }
 }
