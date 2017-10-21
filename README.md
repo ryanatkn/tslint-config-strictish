@@ -19,8 +19,5 @@ Disables all formatting options that overlap with [prettier](https://github.com/
 }
 ```
 
-Some rules like `no-for-in-array` require typechecking,
-which can be enabled like this: `tslint --project tsconfig.json --type-check`.
-
 ## License
 MIT
