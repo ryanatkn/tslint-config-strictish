@@ -1,6 +1,6 @@
 {
   "name": "tslint-config-strictish",
-  "version": "5.3.0",
+  "version": "5.3.1",
   "description": "an opinionated base config for tslint",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,9 @@
     "type": "git",
     "url": "git+https://github.com/ryanatkn/tslint-config-strictish.git"
   },
-  "keywords": ["tslint"],
+  "keywords": [
+    "tslint"
+  ],
   "author": "Ryan Atkinson <ryanatkn@gmail.com>",
   "license": "MIT",
   "bugs": {
