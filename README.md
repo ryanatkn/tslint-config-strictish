@@ -6,7 +6,7 @@ config with strict (but not too strict!) conventions.
 Disables all formatting options that overlap with [prettier](https://github.com/prettier/prettier).
 
 ## Usage
-    npm install --save-dev https://github.com/ryanatkn/tslint-config-strictish
+    npm install --save-dev ryanatkn/tslint-config-strictish#v5.3.1
 
 ```javascript
 // tslint.json
