@@ -14,7 +14,7 @@ Disables all formatting options that overlap with [prettier](https://github.com/
   "extends": ["tslint-config-strictish"],
   "rules": {
     // overrides
-    "curly": true
+    "curly": false
   }
 }
 ```
