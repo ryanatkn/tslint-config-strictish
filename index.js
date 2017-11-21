@@ -9,7 +9,7 @@ module.exports = {
     ban: false, // [true, ["someGlobalMethod"], ["someObject", "someFunction"], ["someObject", "otherFunction", "Optional explanation"]]
     "ban-comma-operator": true,
     "ban-types": [true, ["Object", "Use {} instead."], ["String"]],
-    "binary-expression-operand-order": true,
+    "binary-expression-operand-order": false, // can be usefully expressive
     "callable-types": true,
     "class-name": true,
     "comment-format": false,
@@ -172,7 +172,7 @@ module.exports = {
       /*, "ignore-case", "match-declaration-order"*/
     ],
     "one-line": false, // prettier
-    "one-variable-per-declaration": [true, "ignore-for-loop"],
+    "one-variable-per-declaration": [false, "ignore-for-loop"], // no good reason to restrict
     "only-arrow-functions": [
       true,
       "allow-declarations",
