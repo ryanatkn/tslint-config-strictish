@@ -235,7 +235,7 @@ module.exports = {
       // "array-destructuring",
     ],
     "typedef-whitespace": [
-      true,
+      false, // prettier
       {
         // "nospace" || "onespace" || "space"
         "call-signature": "nospace",
