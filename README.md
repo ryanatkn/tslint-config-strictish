@@ -3,9 +3,9 @@
 An opinionated [tslint](https://github.com/palantir/tslint)
 config with strict (but not too strict!) conventions.
 
-**DEPRECATED** use
+:warning: **DEPRECATED** use
 [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)
-instead
+instead :warning:
 
 Disables all formatting options that overlap with [prettier](https://github.com/prettier/prettier).
 
