@@ -1,7 +1,13 @@
 {
   "name": "tslint-config-strictish",
   "version": "5.3.3",
-  "description": "an opinionated base config for tslint",
+  "description": "an opinionated base config for tslint (DEPRECATED)",
+  "license": "Unlicense",
+  "author": {
+    "name": "Ryan Atkinson",
+    "email": "mail@ryanatkn.com",
+    "url": "https://www.ryanatkn.com"
+  },
   "main": "index.js",
   "scripts": {
     "version": "git add -A",
@@ -14,8 +20,6 @@
   "keywords": [
     "tslint"
   ],
-  "author": "Ryan Atkinson <ryanatkn@gmail.com>",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ryanatkn/tslint-config-strictish/issues"
   },

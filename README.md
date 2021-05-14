@@ -24,4 +24,5 @@ Disables all formatting options that overlap with [prettier](https://github.com/
 ```
 
 ## License
-MIT
+
+public domain ([The Unlicense](license))
